@@ -40,5 +40,18 @@ namespace ReferenceAndValueTypesTests
             list.Add("Istanbul");
             Assert.Equal(list.Count, list2.Count);
         }
+        [Fact]
+        public void swapvaluetest()
+        {
+            var refType = new ValueAndReferenceTypes.ReferenceType();
+            int a = 23, b = 55;
+            refType.SwapValue(a, b);
+            Assert.Equal(23, a);
+            Assert.Equal(55, b);
+
+        }
+       
+       
+
     }
 }
