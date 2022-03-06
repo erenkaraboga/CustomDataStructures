@@ -36,7 +36,7 @@ namespace ArrayTest
             var arr= new DataStructures.Array.Array(1,2,3);
             var arr2 = arr.Clone() as DataStructures.Array.Array;
             Assert.Equal(arr.Lenghth, arr2.Lenghth);
-            Assert.Equal(arr.GetHashCode(), arr2.GetHashCode());    
+            Assert.Equal(arr.GetHashCode(),  arr2.GetHashCode());    
         }
 
     }
