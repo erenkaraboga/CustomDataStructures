@@ -16,12 +16,6 @@ namespace ValueAndReferenceTypes
             this.x = x;
             this.y = y;
         }
-        public void SwapValue(int x ,int y)
-        {
-            int temp = x ;
-            x = y ; 
-            y = temp ;
-        }
         public void SwapRefValue(ref int x, ref int  y)
         {
             int temp = x;
@@ -33,24 +27,11 @@ namespace ValueAndReferenceTypes
             variable = 100;
             return;
         }
-        public void CheckOutKeyWordByValue( int variable)
+        public void CheckOutKeyWordByValue(int variable)
         {
             variable = 100;
             return;
         }
-
-    }
-    
-    public struct ValueType
-    {
-        public ValueType(int x, int y)
-        {
-            this.x = x;
-            this.y = y;
-        }
-
-        public int x { get; set; }
-        public int y { get; set; }
 
     }
 }

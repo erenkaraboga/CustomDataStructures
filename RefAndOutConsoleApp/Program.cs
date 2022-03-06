@@ -7,30 +7,21 @@ namespace RefAndOutConsoleApp
     {
         static void Main(string[] args)
         {
-
-            var arr = new int[] { 1, 2, 3 };
-            arr.SetValue(10 ,0);
-            
-            
-            Console.WriteLine(arr.GetValue(0));
-            foreach (var item in arr)
-            {
-                Console.WriteLine(item);
-            }
+           
 
 
-
-            /*var refAndValue = new ValueAndReferenceTypes.ReferenceType();
+            var refType = new ValueAndReferenceTypes.ReferenceType();
+            var valueType = new ValueAndReferenceTypes.ValueType();
             int a = 23,b = 55;
-            refAndValue.SwapValue(a, b);
+            valueType.swap(a, b);
             Console.WriteLine("{0}-{1}",a,b);
-            refAndValue.SwapRefValue(ref a, ref b);
+            refType.SwapRefValue(ref a, ref b);
             Console.WriteLine("{0}-{1}", a, b);
 
-            refAndValue.CheckOutKeyWordByValue(b);
+            refType.CheckOutKeyWordByValue(b);
             Console.WriteLine(b);
-            refAndValue.CheckOutKeyWordByRef(out b);
-            Console.WriteLine(b);*/
+            refType.CheckOutKeyWordByRef(out b);
+            Console.WriteLine(b);
         }
     }
 }
