@@ -12,7 +12,7 @@ namespace LimitOfDataType
             Console.WriteLine("Byte");
             Console.WriteLine("Max={0} Min={1}", Byte.MaxValue, byte.MinValue);
             Console.WriteLine("sByte");
-            Console.WriteLine("Max={0} Min= {1}", sbyte.MaxValue, sbyte.MinValue);
+            Console.WriteLine("Max={0} Min=  {1}", sbyte.MaxValue, sbyte.MinValue);
             Console.WriteLine("int");
             Console.WriteLine("Max={0} Min={1}", int.MaxValue, int.MinValue);
             Console.WriteLine("double");
