@@ -6,7 +6,7 @@ namespace DataStructures.Array
     public class Array:ICloneable,IEnumerable
     {
         public int Lenghth => innerArray.Length;
-        private Object[] innerArray { get; set; }
+        protected Object[] innerArray { get; set; }
         public Array(int defaultSize=16)
         {
             innerArray = new Object[defaultSize];
@@ -44,7 +44,18 @@ namespace DataStructures.Array
 
         public IEnumerator GetEnumerator()
         {
-            return innerArray.GetEnumerator();
+            return new CustomEnumarateClass(innerArray);
+        }
+        public int IndexOf(Object value)
+        {
+            for (int i = 0; i < innerArray.Length; i++)
+            {
+                if (GetValue(i).Equals(value))
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
     }
 }

@@ -4,41 +4,30 @@ namespace DataStructures.Array
 {
     public class CustomEnumarateClass : IEnumerator
     {
-        private Object[] InnerList;
-        private int Index;
-        public object Current => InnerList[Index];
+        private Object[] _array;
+        private int Index = -1;
+        public object Current => _array[Index];
 
         public CustomEnumarateClass(Object[] arr)
         {
-            InnerList = arr;
-            Index = InnerList.Length;
-
-
+            _array = arr;
+         
         }
         public bool MoveNext()
         {
-            if (Index == InnerList.Length)
+            if (Index < _array.Length-1)
             {
 
-                Index = InnerList.Length - 1;
+                Index++;
                 return true;
             }
-            if (Index > 0)
-            {
-                Index--;
-                return true;
-            }
-            else
-            {
-                Index = InnerList.Length;
-                return false;
-            }
+            return false;
 
         }
 
         public void Reset()
         {
-            Index = InnerList.Length;
+            Index = -1;
         }
     }
 

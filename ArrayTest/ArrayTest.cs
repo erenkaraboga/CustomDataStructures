@@ -16,7 +16,7 @@ namespace ArrayTest
             var arr = new DataStructures.Array.Array(defaultSize);
             Assert.Equal(defaultSize, arr.Lenghth);
         }
-        [Fact] 
+        [Fact]  
         public void check_Array_Constructor_with_Params()
         {
             var arr = new DataStructures.Array.Array(1, 2, 3);
@@ -37,6 +37,17 @@ namespace ArrayTest
             var arr2 = arr.Clone() as DataStructures.Array.Array;
             Assert.Equal(arr.Lenghth, arr2.Lenghth);
             Assert.Equal(arr.GetHashCode(),  arr2.GetHashCode());    
+        }
+        [Fact]
+        public void Array_Custom_GetEnumarator_Test()
+        {
+            var array = new DataStructures.Array.Array(10,20,30);
+            string s = "";
+            foreach (var item in array)
+            {
+                s += item;
+            }
+            Assert.Equal("102030", s);
         }
 
     }
