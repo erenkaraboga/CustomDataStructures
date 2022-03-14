@@ -36,14 +36,13 @@ namespace DataStructures.Array
             }
             return innerArray[index];
         }
-
         public object Clone()
         {
             return MemberwiseClone();
         }
-
         public IEnumerator GetEnumerator()
         {
+            //return innerArray.GetEnumerator();
             return new CustomEnumarateClass(innerArray);
         }
         public int IndexOf(Object value)
