@@ -16,6 +16,7 @@ namespace Array
         {
             position = 0;
         }
+        
         public ArrayList(IEnumerable collection):this()
         {
             foreach (var item in collection)

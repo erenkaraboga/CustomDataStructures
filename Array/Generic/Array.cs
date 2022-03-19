@@ -117,12 +117,13 @@ namespace Array.Generic
 
         public IEnumerator<T> GetEnumerator()
         {
-            return new ArrayEnumerator<T>(InnerArray);
+            return InnerArray.Take(position).GetEnumerator();
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return GetEnumerator();
+            //return innerArray.Take(position).GetEnumerator();
+            return InnerArray.Take(position).GetEnumerator();
         }
     }
     public class ArrayEnumerator<T> : IEnumerator<T>
