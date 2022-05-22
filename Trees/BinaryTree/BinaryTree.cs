@@ -120,9 +120,12 @@ namespace DataStructures.Trees.BinaryTree
 
         public T Delete(T value)
         {
-            throw new NotImplementedException();
+            var tempDelete = new Node<T>(value);
+            return value;
         }
 
+       
+  
         public T Delete()
         {
             throw new NotImplementedException();
