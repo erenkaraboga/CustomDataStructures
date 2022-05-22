@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BinaryTreeApp
+﻿namespace DataStructures.Trees.BinaryTree
 {
     public class Node<T>
     {
-        public Node(T value)
+        public Node()
+        {
+            Left = new Node<T>();
+            Right = new Node<T>();  
+
+        }
+        public Node(T value) : this()
         {
             Value = value;
         }

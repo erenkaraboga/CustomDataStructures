@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataStructures.Trees.BinaryTree;
+using System;
 using System.Collections.Generic;
 
 namespace BinaryTreeApp
@@ -15,6 +16,7 @@ namespace BinaryTreeApp
             root.Right.Left = new Node<int>(6);
             root.Right.Right = new Node<int>(7);
             Console.WriteLine(root);
+            levelOrderTraverse<int>(root.Right);
         }
         static void levelOrderTraverse<T>(Node<T> root)
         {
@@ -31,6 +33,7 @@ namespace BinaryTreeApp
                     if (temp.Right != null) q.Enqueue(temp.Right);
                 }
             }
+            list.ForEach(e => Console.WriteLine(e));
 
         }
     }
